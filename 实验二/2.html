@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin: 20px auto;
+        }
+        table {
+            margin: 10px auto;
+            border: 1px solid;
+            width: 500px;
+            border-collapse: collapse;
+        }
+        tr:nth-child(1) {
+            text-align: center;
+            font-weight: bold;
+            background-color: blue;
+        }
+        .body {
+            background-color: chartreuse;
+        }
+        .last {
+            background-color: yellow;
+        }
+        td {
+            border: 1px solid;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>活动报名季度数据报表</h1>
+    <table>
+        <tr>
+            <td class="one">季度</td>
+            <td class="two">人数</td>
+        </tr>
+        <tr class="body">
+            <td class="one">一季度</td>
+            <td class="two">16100</td>
+        </tr>
+        <tr class="body">
+            <td class="one">二季度</td>
+            <td class="two">14500</td>
+        </tr>
+        <tr class="body">
+            <td class="one">三季度</td>
+            <td class="two">18000</td>
+        </tr>
+        <tr class="body">
+            <td class="one">四季度</td>
+            <td class="two">14200</td>
+        </tr>
+        <tr class="last">
+            <td class="one">季度平均报名人数</td>
+            <td class="two">15700</td>
+        </tr>
+        <tr class="last">
+            <td class="one">总计</td>
+            <td class="two">62800</td>
+        </tr>
+    </table>
+</body>
+</html>
