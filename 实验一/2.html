@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        .text {
+            text-align: center;
+            width: 250px;
+            margin: 10px auto;
+            font-size: 20px;
+        }
+        .out {
+            width: 300px;
+            margin: 50px auto;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        点击图片播放，暂停音乐
+    </div>
+    <div class="out">
+
+    <img src="./img/你就是歌姬吧.jpg" alt="">
+    <audio controls>
+        对不起，您的浏览器
+        <source src="./music/初音ミク、Otomania - Ievan Polkka (Replica ver.).mp3">
+    <div class="btn">
+        <a href="javascript:;"></a>
+    </div>
+</div>
+
+<script>
+    var img = document.querySelector('img');
+    var au = document.querySelector('audio');
+    var flag = 0;
+    img.addEventListener('click', function() {
+        if (flag == 0) {
+            au.play();
+            flag = 1;
+        } else {
+            au.pause();
+            flag = 0;
+        }
+    })
+</script>
+</body>
+</html>

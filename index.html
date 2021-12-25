@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>wangpeng</title>
+
+
+<style>
+    
+    div>p{font-size: 50px;}
+ 
+    *{
+        margin: 0;
+        padding: 0;
+    }
+     
+    body{
+        /*如果不需要3D效果请把下面这行删掉*/
+        perspective: 2500px;
+        overflow: hidden;
+    }
+     
+    #bg{
+        position: absolute;
+        z-index: 0;
+        width: 1920px;
+        height: 1080px;
+        /*如果不需要3D效果把transform属性删掉，下同*/
+        transform: rotateX(5deg) rotateY(15deg) rotateZ(-5deg) scale(1.2);
+        /*如果需要添加背景图，请在此添加background属性*/
+        background-image: url(./img/飞车.jpg);
+        background-size: 1800px;
+        background-position: 0 -80px;
+    }
+     
+    #box{
+        position: absolute;
+        z-index: 9999;
+        width: 1440px;
+        height: 720px;
+        transform: rotateX(5deg) rotateY(15deg) rotateZ(-5deg);
+        left: 200px;
+        top: 50px;
+    }
+    #box div{
+        position: absolute;
+        border: 2px solid #EEE;
+        background: rgba(0,0,0,0.7);
+        box-shadow: 0px 0px 10px 0px #111;
+        transition: all 0.3s;
+    }
+    #box div:hover{
+        z-index: 9999;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px 0px #EEE;
+        background: #FFF;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+   span {
+       font-size: 30px;
+       color: aliceblue;
+       margin-left: 10px;
+       display: block;
+   }
+   .block:hover span{
+       color: black;
+   }
+</style>
+</head>
+ 
+<body>
+    <audio src="./img/Skrillex,The Doors,Zedd - Breakn' a Sweat (Zedd Remix).mp3" autoplay></audio>
+     
+    <div id="bg"></div>
+    <div id="box">
+        <a href="./伪类选择器.html">
+            <div style="width: 300px; height: 100px; left: 400px; top: 30px;"><p></p></div>
+        </a>
+        
+        <a href="./实验一/实验一.html" target="_blank">
+            <div style="width: 130px; height: 130px; left: 710px; top: 0px;" class="block">
+                <span>
+                实验一
+                </span>
+            </div>
+        </a>
+        
+        <a href="./实验二/实验二.html" target="_blank">
+            <div style="width: 550px; height: 300px; left: 400px; top: 140px;" class="block">
+                <span style=" font-size: 80px;">
+                    实验二
+                </span>
+            </div>
+        </a>
+        
+        <a href="./实验三/实验三.html" target="_blank">
+            <div style="width: 300px; height: 150px; left: 90px; top: 140px;" class="block">
+                <span style=" font-size: 40px;">
+                实验三
+                </span>
+            </div>
+        </a>
+        
+        <a href="./实验四/实验四.html" target="_blank">
+            <div style="width: 140px; height: 140px; left: 250px; top: 300px;" class="block">
+                <span style=" font-size: 30px;">
+                    实验四
+                </span>
+            </div>
+        </a>
+        
+        <a href="./实验五/实验五.html" target="_blank">
+            <div style="width: 350px; height: 200px; left: 960px; top: 240px;" class="block">
+                <span style=" font-size: 50px;">
+                    实验五
+                </span>
+            </div>
+        </a>
+        
+        <a href="./实验六/实验六.html" target="_blank">
+            <div style="width: 300px; height: 150px; left: 290px; top: 450px;" class="block">
+                <span style=" font-size: 40px;">
+                    实验六
+                </span>
+            </div>
+        </a>
+        
+        <a href="./实验七/实验七.html" target="_blank">
+            <div style="width: 300px; height: 150px; left: 600px; top: 450px;" class="block">
+                <span style=" font-size: 40px;">
+                    实验七
+                </span>
+            </div>
+        </a>
+        
+        <a href="./实验八/index.html" target="_blank">
+            <div style="width: 300px; height: 150px; left: 910px; top: 450px;" class="block">
+                <span style=" font-size: 40px;">
+                        实验八
+                </span>
+            </div>
+        </a>
+            
+        <div style="width: 130px; height: 130px; left: 910px; top: 610px"></div>
+    </div>
+    <script>
+        var block = document.querySelectorAll(".block");
+        var bg = document.getElementById("bg");
+        var box = document.getElementById("box");
+        
+         
+        document.onmousemove=function(e)
+        {
+             
+            /*
+             * 背景图初始坐标（300,100）,请根据需要自行调整
+             * 元素名.style.left|top = 初始X|Y坐标（可选） + (e.pageX|Y - 主体内容宽度|高度/2) / 常数（可选） + "px"
+             */
+             
+            bg.style.left = 250 + (-e.pageX - 960) / 10 + "px";
+            bg.style.top = 100 + (-e.pageY - 540) / 10 + "px";
+             
+            box.style.left = 400 + (-e.pageX - 480) / 5 + "px";
+            box.style.top = 170 + (-e.pageY - 270) / 5 + "px";
+        }
+       
+    </script>
+    
+     
+        
